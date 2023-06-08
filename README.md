@@ -37,13 +37,13 @@ Example:
     "Company Goal": ["Digital experience platform", "Empowering artists and businesses"],
 }
 
-## How to Use It:
+#### How to Use It:
 Paste your API Key in place of OPENAI_API_KEY.
 Paste the job description after job_description = """.
 Run the script.
 Information about jobs you're interested in will be saved to the "Consider" folder, while other job information will be saved in the "Other" folder for future reference.
 
-## Don't have an API Key?
+#### Don't have an API Key?
 If you don't possess an API Key, you can directly use the ChatGPT web application. Simply paste the following content before the job description. This will assist you in extracting crucial information. Please note, however, that this method does not automatically save the results locally.
 
 
