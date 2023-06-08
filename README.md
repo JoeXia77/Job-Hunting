@@ -35,13 +35,6 @@ Example:
     "years of experience required": ["6+ year -- web development"],
     "Company Name": "Adobe",
     "Company Goal": ["Digital experience platform", "Empowering artists and businesses"],
-    "Salary Info": {
-        "U.S. pay range": "$119,000 -- $232,700 annually",
-        "Salary markets": "Differ based on work location and job-related knowledge, skills, and experience",
-        "Sales Roles Salary Info": "Total target compensation (TTC = base + commission), incentives are in the form of sales commission plans.",
-        "Non-Sales Roles Salary Info": "Starting salaries are expressed as base salary and short-term incentives are in the form of Annual Incentive Plan (AIP).",
-        "Long-term Incentives": "Certain roles may be eligible for long-term incentives in the form of a new hire equity award."
-    }
 }
 
 ## How to Use It:
