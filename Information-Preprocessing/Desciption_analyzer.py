@@ -6,6 +6,7 @@ import random
 OPENAI_API_KEY = 'sk-12345'
 openai.api_key = OPENAI_API_KEY
 
+
 rule = """
 You are an AI agent to extract useful information from the job description for job huntings. 
 Generate a json file using the information you get from "job description". Here are the keys of the output json file, please try to complete the value of each key. Keys: 1. Job Title, 2. Level, 3. Qualified, 4. Skills, 5. Responsibilities, 6.years of experience required, 7.Company Name, 8. Company Goal}
@@ -13,7 +14,7 @@ Generate a json file using the information you get from "job description". Here 
 Rules:
 Describe the "Job Title" concisely and use alphabet only
 Categorize the level of the job into: entry level, mid level, senior level.
-Decide if I am not qualified for this job based on the following logic: "If this job for US citizen only, I am not qualified. If the job that do not require a computer science degree, I am not qualified. If the previous conditions are not mentioned, I am qualified. Answer in the json file Qualified part with yes or no. If answer No, give some concise clue within 20 words.
+Decide if I am not qualified for this job based on the following logic: "If this job for US citizen only, I am not qualified. If the job that do not require a computer science degree, I am not qualified. If job description mentioned sponsorship is not provided, I am not qualified. If the previous conditions are not mentioned, I am qualified. Answer in the json file Qualified part with yes or no. If answer No, give some concise clue within 20 words.
 extract all the specific technical skills required in a format of keywords or tags and list them in json file Skill part. List programming languages used firstly in your output if exist, tools used second, and other techs used in the end of your output.
 Answer the Company goal part in json file with some tags or key words, your result should try to explain the company type and its main product.
 List all years of working experience required in a python list under as the content of "years of experience required" key in json file, make the result consice like ["x year -- field", ...]
@@ -28,40 +29,65 @@ job_description = """
 
 
 
+
+
+
+
+
 About the job
-Our Company
+Why will you enjoy this new opportunity?
 
-Changing the world through digital experiences is what Adobe’s all about. We give everyone—from emerging artists to global brands—everything they need to design and deliver exceptional digital experiences! We’re passionate about empowering people to create beautiful and powerful images, videos, and apps, and transform how companies interact with customers across every screen.
+Work on bleeding edge Kubernetes deployments and solutions.
+Opportunity to work on telco scale problems.
+Distributed and cloud-native product architecture.
+Freedom to innovate and explore efficient solutions.
 
-We’re on a mission to hire the very best and are committed to creating exceptional employee experiences where everyone is respected and has access to equal opportunity. We realize that new ideas can come from everywhere in the organization, and we know the next big idea could be yours!
+Success in the Role: What are the performance outcomes over the first 6-12 months you will work toward completing?
 
-Our Company
+Demonstrate eagerness to learn and master Kubernetes and Cloud-native deployment and infrastructure.
+Innovate continuously and help the product continue to lead in the telco automation and orchestration space.
+Design and develop high-quality software.
 
-Changing the world through digital experiences is what Adobe’s all about. We give everyone—from emerging artists to global brands—everything they need to design and deliver exceptional digital experiences. We’re passionate about empowering people to craft beautiful and powerful images, videos, and apps, and transform how companies interact with customers across every screen.
+The Work: What type of work will you be doing? What assignments, requirements, or skills will you be performing on a regular basis?
 
-We’re on a mission to hire the very best and are committed to building exceptional employee experiences where everyone is respected and has access to equal opportunity. We realize that new ideas can come from everywhere in the organization, and we know the next big idea could be yours!
+Hands-on development, and design of critical modules for the Telco Cloud Automation Product.
+Work closely with architects, different teams, and QEE to develop innovative and efficient infrastructure automation solutions
+Work across multiple VMware product teams and develop inclusive solutions.
 
-The Opportunity
+What is the leadership like for this role? What is the structure and culture of the team like?
 
-Adobe is looking for a Software Development Engineer to build a measurement system that openly collects user-experience interactions and provides metrics that drive concrete insights.
+Work as an individual contributor and work in a small team of 4-5 engineers.
+You will work under a tech lead or an architect and work on a module.
+Customer-focused and detail-oriented team culture.
 
-What you'll Do
+Where is this role located?
 
-Deliver best-in-class, responsive and scalable solutions ready for mass audiences.
-Drive and implement a variety of innovative, critical initiatives using the latest tools and technologies.
-Lead engineering initiatives across the stack while pairing with product and engineering partners throughout the company.
-Design, develop, test, deploy and monitor features to enhance security, performance, cost-effectiveness, and User Experience.
-Drive efforts to improve technical quality and solutions through code reviews, architecture reviews, and test suite strategy.
-What you need to succeed
+Flexible/Remote: The role is considered flexible and will be a mix of working from a local VMware office and/or remote depending on your preferences and the arrangements determined with your future manager.
 
-Passion for building: well thought through end-to-end solutions are second nature to you.
-6+ years of professional experience building highly-performant and sophisticated web applications using modern web development technologies.
-Professional experience with building for other developers: this can include APIs, SDKs, or libraries where technical users are the audience.
-Experience working with large datasets, data pipelines, and a desire to work in these areas.
-Ability to operate large scale data processing workflows.
-Foundation in software engineering process & standard methodologies: testing, build automation, monitoring and observability technologies, CI/CD, etc.
-Good written and verbal communication skills and English proficiency
-Nice to have: cloud deployment strategies and knowledge of web performance optimizations.
+What are the benefits and perks of working at VMware?
+
+You and your loved ones will be supported with a competitive and comprehensive benefits package. Below are some highlights, or you can view the complete benefits package by visiting www.benefits.vmware.com.
+
+Medical Coverage, Retirement, and Parental Leave Plans for All Family Types
+Generous Time Off Programs
+40 hours of paid time to volunteer in your community
+Rethink's Neurodiversity program to support parents raising children with learning or behavior challenges, or developmental disabilities
+Financial contributions to your ongoing development (conference participation, trainings, course work, etc.)
+Wellness reimbursement and online fitness and wellbeing classes
+
+For US based candidates, the annual pay range (OTE for commissioned roles; Salary for other roles) for this position is: $84,000 - $190,000. The actual offer will be based on the role, location, and individual candidate experience. Bonus, commission, and/or equity may be eligible for this position. VMware offers comprehensive benefits including, but not limited to: medical, dental, and vision plans, company paid holidays, paid sick leave, and vacation time. Additional benefits for this position can be found at https://benefits.vmware.com/. Your talent advisor can share more about the specific salary range for your preferred location during the hiring process.
+
+This job may require the candidate to travel and/or work from a facility that requires full vaccination prior to entry.
+
+Category : Engineering and Technology
+
+Subcategory: Software Engineering
+
+Experience: Manager and Professional
+
+
+
+
 
 
 
